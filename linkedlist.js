@@ -23,16 +23,22 @@ LinkedList.prototype.display = function() {
   }
   return output;
 
-  var list = new LinkedList();
-  //visualize whatever data is in your linked list as a string.
-  //ex: [5] -> [6] -> [3] -> [18]
-
-  /*
-  var list = new LinkedList();
-  list.push(18);
-  list.push(3);
-  list.push(6);
-  list.push(5);
-  list.display() returns '[5]'-> '[6]'-> '[3]'
-  */
-};
+LinkedList.prototype.pop = function() {
+  if (!this.head) {
+    return null;
+  }
+  let popped = this.head;
+  this.length--;
+  this.head = this.next;
+  return popped;
+}
+LinkedList.prototype.search = function(val) {
+  //if the value is in our list, then return the node that contains that value.
+  //if the value is not in the list, return null
+}
+LinkedList.prototype.getItem = function(indx) {
+  //given an index that is less than the length of the list, return the value of the node at that index.
+}
+LinkedList.prototype.remove = function(val) {
+  //remove the first node found with value === val
+}
