@@ -33,6 +33,14 @@ LinkedList.prototype.pop = function() {
   return popped;
 }
 LinkedList.prototype.search = function(val) {
+  var temp = this.head;
+  while(temp) {
+    if(temp.val === val) {
+      return temp;
+    }
+    temp = temp.next;
+  }
+  return null;
   //if the value is in our list, then return the node that contains that value.
   //if the value is not in the list, return null
 }
